@@ -106,6 +106,6 @@ Lowest Grade: 95
 
 ## 👨‍💻 Author
 
-**Hadi Awad**
+**Hadi Awad / HDAW96**
 
 Developed as Task 1 for the CodeAlpha Java Programming Internship.
