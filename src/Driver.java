@@ -18,16 +18,24 @@ public class Driver {
     studentGrade = 0;
     studentName = "";
     try{
-  while(!studentName.trim().equals("-1")) {
+  while(true) {
     if(studentGrade <=100 && studentGrade >=0) {
       System.out.println("***************(-1 to exit)***************");
       System.out.println("Enter the student name: ");
       studentName = scan.nextLine();
-      students.add(studentName);
+      if(!studentName.trim().equals("-1")) {
+        students.add(studentName);
+      }
+      else{
+        break;
+      }
       System.out.println("Enter the student grade: ");
       studentGrade = scan.nextInt();
       if(studentGrade != -1) {
         grades.add(studentGrade);
+      }
+      else{
+        break;
       }
       System.out.println("Added:\nStudent Name: " + studentName + "\nGrade: " + studentGrade);
       total +=studentGrade;
