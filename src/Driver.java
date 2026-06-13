@@ -22,7 +22,7 @@ public class Driver {
     if(studentGrade <=100 && studentGrade >=0) {
       System.out.println("***************(-1 to exit)***************");
       System.out.println("Enter the student name: ");
-      studentName = scan.next();
+      studentName = scan.nextLine();
       System.out.println("Enter the student grade: ");
       studentGrade = scan.nextInt();
       students.add(studentName);
