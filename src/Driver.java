@@ -23,9 +23,9 @@ public class Driver {
       System.out.println("***************(-1 to exit)***************");
       System.out.println("Enter the student name: ");
       studentName = scan.nextLine();
+      students.add(studentName);
       System.out.println("Enter the student grade: ");
       studentGrade = scan.nextInt();
-      students.add(studentName);
       grades.add(studentGrade);
       System.out.println("Added:\nStudent Name: " + studentName + "\nGrade: " + studentGrade);
       total +=studentGrade;
@@ -40,14 +40,15 @@ public class Driver {
   }}catch(Exception ex){
       System.out.println("Error in inputs.");
     }
-
     for(int i = 0; i < students.size(); i++){
       if(grades.get(i)<lowest)
         lowest = grades.get(i);
       if(grades.get(i)>highest)
         highest = grades.get(i);
-      average = (double)total / grades.size();
       System.out.println("Student " + i +": Name: "+students.get(i) +" Grade: "+grades.get(i));
+    }
+    if(!grades.isEmpty()) {
+      average = (double) total / grades.size();
     }
     System.out.println("Student Names and Grades:\n");
     System.out.println("Average Grade: "+average);
