@@ -10,8 +10,8 @@ public class Driver {
 
   String studentName;
   int studentGrade;
-  double average;
-  int highest = 0, lowest = 0, total = 0;
+  double average = 0;
+  int highest = 0, lowest = 100, total = 0;
     studentGrade = 0;
     studentName = "";
     try{
@@ -37,10 +37,19 @@ public class Driver {
   }}catch(Exception ex){
       System.out.println("Error in inputs.");
     }
-    System.out.println("Student Names and Grades:\n");
-    for(int i = 0; i < students.size(); i++){
 
+    for(int i = 0; i < students.size(); i++){
+      if(grades.get(i)<lowest)
+        lowest = grades.get(i);
+      if(grades.get(i)>highest)
+        highest = grades.get(i);
+      average = (double)total / grades.size();
+      System.out.println("Student " + i +": Name: "+students.get(i) +" Grade: "+grades.get(i));
     }
+    System.out.println("Student Names and Grades:\n");
+    System.out.println("Average Grade: "+average);
+    System.out.println("Highest Grade: "+highest);
+    System.out.println("Lowest Grade: "+lowest);
   }
 
 
