@@ -19,7 +19,7 @@ public class Driver {
     studentName = "";
     try{
   while(true) {
-    if(studentGrade <=100 && studentGrade >=0) {
+    if(studentGrade <= 100 && studentGrade >= 0) {
       System.out.println("***************(-1 to exit)***************");
       System.out.println("Enter the student name: ");
       studentName = scan.nextLine();
@@ -56,7 +56,7 @@ public class Driver {
         lowest = grades.get(i);
       if(grades.get(i)>highest)
         highest = grades.get(i);
-      System.out.println("Student " + i +": Name: "+students.get(i).toUpperCase() +" Grade: "+grades.get(i));
+      System.out.println("Student " + i +": Name: " + students.get(i).toUpperCase() +" Grade: " + grades.get(i));
     }
     if(!grades.isEmpty()) {
       average = (double) total / grades.size();
@@ -64,9 +64,9 @@ public class Driver {
       highest = grades.get(0);
     }
     System.out.println("Student Names and Grades:\n");
-    System.out.println("Average Grade: "+average);
-    System.out.println("Highest Grade: "+highest);
-    System.out.println("Lowest Grade: "+lowest);
+    System.out.println("Average Grade: " + average);
+    System.out.println("Highest Grade: " + highest);
+    System.out.println("Lowest Grade: " + lowest);
     scan.close();
   }
 
