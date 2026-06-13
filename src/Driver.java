@@ -14,7 +14,7 @@ public class Driver {
   String studentName;
   int studentGrade;
   double average = 0;
-  int highest = 0, lowest = 100, total = 0;
+  int highest = 0, lowest = 0, total = 0;
     studentGrade = 0;
     studentName = "";
     try{
@@ -31,6 +31,7 @@ public class Driver {
       }
       System.out.println("Enter the student grade: ");
       studentGrade = scan.nextInt();
+      scan.nextLine();
       if(studentGrade != -1) {
         grades.add(studentGrade);
       }
@@ -55,15 +56,18 @@ public class Driver {
         lowest = grades.get(i);
       if(grades.get(i)>highest)
         highest = grades.get(i);
-      System.out.println("Student " + i +": Name: "+students.get(i) +" Grade: "+grades.get(i));
+      System.out.println("Student " + i +": Name: "+students.get(i).toUpperCase() +" Grade: "+grades.get(i));
     }
     if(!grades.isEmpty()) {
       average = (double) total / grades.size();
+      lowest = grades.get(0);
+      highest = grades.get(0);
     }
     System.out.println("Student Names and Grades:\n");
     System.out.println("Average Grade: "+average);
     System.out.println("Highest Grade: "+highest);
     System.out.println("Lowest Grade: "+lowest);
+    scan.close();
   }
 
 
