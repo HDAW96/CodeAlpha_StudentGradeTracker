@@ -18,7 +18,7 @@ public class Driver {
     studentGrade = 0;
     studentName = "";
     try{
-  while(studentGrade !=-1 || studentName.trim().equals("-1")) {
+  while(!studentName.trim().equals("-1")) {
     if(studentGrade <=100 && studentGrade >=0) {
       System.out.println("***************(-1 to exit)***************");
       System.out.println("Enter the student name: ");
@@ -26,7 +26,9 @@ public class Driver {
       students.add(studentName);
       System.out.println("Enter the student grade: ");
       studentGrade = scan.nextInt();
-      grades.add(studentGrade);
+      if(studentGrade != -1) {
+        grades.add(studentGrade);
+      }
       System.out.println("Added:\nStudent Name: " + studentName + "\nGrade: " + studentGrade);
       total +=studentGrade;
       System.out.println("******************************************");
