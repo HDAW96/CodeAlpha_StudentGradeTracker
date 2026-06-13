@@ -1,3 +1,6 @@
+// Hadi Awad - CodeAlpha Task 1
+//Student Grade Tracker
+
 import java.util.Scanner;
 import java.util.ArrayList;
 
