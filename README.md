@@ -93,16 +93,6 @@ Lowest Grade: 95
 
 ---
 
-## 🔮 Future Improvements
-
-- Use objects (`Student` class) instead of parallel ArrayLists.
-- Improve input validation.
-- Support full student names.
-- Allow editing and deleting student records.
-- Export reports to a file.
-- Add a graphical user interface using Java Swing or JavaFX.
-
----
 
 ## 👨‍💻 Author
 
